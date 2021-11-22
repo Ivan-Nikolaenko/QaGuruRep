@@ -28,22 +28,16 @@ public class tests {
         $("[id=dateOfBirthInput]").click();
 //        -> далее интересный способ поиска необходимого значения атрибута :)
         $(by("aria-label", "Choose Wednesday, November 10th, 2021")).click();
-//         После нахождения элемента использую ввод значения и нажатие на Enter
         $("[id=subjectsInput]").setValue("English").pressEnter();
 //        Пришлось использовать хpath, по другому не удавалось выйти на данный элемент
         $(byXpath("//*[@id=\"hobbiesWrapper\"]/div[2]/div[1]/label")).click();
-//        $("[id=uploadPicture]").doubleClick(); -> не требует нажатия, используем конструкцию Селенида для отправки файла ,которую
-//        использую далее ->
         File file = $("#uploadPicture").uploadFile(new File("C:\\Users\\User\\IdeaProjects\\QaGuruRep\\filetest.txt"));
         $("[id=currentAddress]").setValue("Omsk ugly and lost city");
-        $(byXpath("//*[@id=\"state\"]/div/div[1]")).click();
-        $(byXpath("//*[@id=\"state\"]/div/div[1]")).setValue("NCR");
+        $("[id=state] input").setValue("N").pressEnter();
+        $("[id=city] input").setValue("G").pressEnter();
+        $("[id=submit]").click();
 
 
-
-
-
-        Thread.sleep(4000);
 
 
     }
