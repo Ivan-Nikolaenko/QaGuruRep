@@ -1,12 +1,11 @@
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import java.io.File;
 
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Selectors.by;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -36,9 +35,7 @@ public class tests {
         $("[id=state] input").setValue("N").pressEnter();
         $("[id=city] input").setValue("G").pressEnter();
         $("[id=submit]").click();
-
-
-
+        $("[id=closeLargeModal]").click();
 
     }
 }
