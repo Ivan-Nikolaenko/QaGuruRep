@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class tests {
     @BeforeAll
     static void setMaxSize() {
-        Configuration.startMaximized = true;
+        Configuration.browserSize="1920x1080";
     }
 
     @Test
