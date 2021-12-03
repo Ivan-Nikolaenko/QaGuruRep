@@ -12,7 +12,7 @@ public class FindSelenideTest {
 
     @Test
     void shouldFindSelenideOnGitHub() {
-        Configuration.headless = true;
+        Configuration.headless = false;
         //открыть страницу гитхаб
         open("https://github.com/");
         //ввести в поле поиска selenide+enter

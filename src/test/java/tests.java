@@ -26,7 +26,7 @@ public class tests {
         $("[id=userNumber]").setValue("0123456789");
         $("[id=dateOfBirthInput]").click();
 //        -> далее интересный способ поиска необходимого значения атрибута :)
-        $(by("aria-label", "Choose Wednesday, November 10th, 2021")).click();
+        $(by("aria-label", "Choose Friday, December 10th, 2021")).click();
         $("[id=subjectsInput]").setValue("English").pressEnter();
 //        Пришлось использовать хpath, по другому не удавалось выйти на данный элемент
         $(byXpath("//*[@id=\"hobbiesWrapper\"]/div[2]/div[1]/label")).click();
